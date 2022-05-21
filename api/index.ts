@@ -11,7 +11,7 @@ module.exports = async (req: Request, res: Response) => {
   try {
     const file = await getScreenshot(req.query.url, req.query.width, req.query.height);
     res.setHeader('Content-Type', `image/png`);
-    res.setHeader('Cache-Control', `public, immutable, no-transform, s-maxage=31536000, max-age=31536000`);
+    res.setHeader('Cache-Control', 'no-cache');
     res.status(200).end(file);
   } catch (error) {
     console.error(error)
