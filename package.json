@@ -6,8 +6,8 @@
   "license": "MIT",
   "dependencies": {
     "@types/node-fetch": "^2.6.1",
-    "chrome-aws-lambda": "2.1.1",
-    "puppeteer-core": "2.1.1"
+    "chrome-aws-lambda": "6.0.0",
+    "puppeteer-core": "6.0.0"
   },
   "devDependencies": {
     "@types/puppeteer": "2.0.1",
