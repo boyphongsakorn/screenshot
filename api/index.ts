@@ -1,5 +1,6 @@
 import { Request, Response } from '@vercel/node'
 import { getScreenshot } from './_lib/puppeteer';
+import fetch from 'node-fetch';
 
 module.exports = async (req: Request, res: Response) => {
   const usage = "https://s.vercel.app/api?url=https://google.com&width=1280&height=720 or https://s.vercel.app/api?lotimg=true&date=01062565"
