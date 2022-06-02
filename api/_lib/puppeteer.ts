@@ -53,7 +53,7 @@ export async function getScreenshot(url, width, height, havelot, date) {
         width: Number(width) || 1600,
         height: Number(height) || 1066,
     });
-    await page.waitFor(5000);
+    await page.waitFor(6000);
     const file = await page.screenshot();
     return file;
 }
