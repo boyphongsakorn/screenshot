@@ -26,6 +26,10 @@ export async function getScreenshot(url, width, height, havelot, date) {
             let month = new Date().getMonth() + 1;
             let year = new Date().getFullYear();
             let byear = year + 543;
+            //if month only 1 char add 0
+            if (month < 10) {
+                month = "0" + month;
+            }
             datecheck = date + '' + month + '' + byear;
         }
         const response = await fetch('https://lotapi.pwisetthon.com/?date=' + datecheck);
