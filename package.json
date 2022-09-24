@@ -17,6 +17,6 @@
     "typescript": "3.8.3"
   },
   "engines": {
-    "node": "12.x"
+    "node": "14.x"
   }
 }
