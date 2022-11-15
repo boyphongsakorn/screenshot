@@ -65,9 +65,9 @@ export async function getScreenshot(url, width, height, havelot, date) {
         width: Number(width) || 1600,
         height: Number(height) || 1066,
     });
-    /*let secondtowaiting = 0;
+    let secondtowaiting = 0;
     //if havelot is true, it will wait for 5 seconds
-    if (havelot) {
+    /*if (havelot) {
         secondtowaiting = 5;
     }else{*/
         secondtowaiting = 6;
