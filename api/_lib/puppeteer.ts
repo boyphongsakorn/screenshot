@@ -29,7 +29,7 @@ export async function getScreenshot(url, width, height, havelot, date) {
             let bmonth = month < 10 ? "0" + month : month;
             datecheck = date + '' + bmonth + '' + byear;
         }
-        const response = await fetch('https://lotapi3.pwisetthon.com/?date=' + datecheck);
+        const response = await fetch('https://lottsanook-cfworker.boy1556.workers.dev/?date=' + datecheck);
         const test = await response.json();
         let monthtext;
         switch (datecheck.substring(2, 4)) {
