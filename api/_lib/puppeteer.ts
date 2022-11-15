@@ -69,10 +69,10 @@ export async function getScreenshot(url, width, height, havelot, date) {
     //if havelot is true, it will wait for 5 seconds
     if (havelot) {
         secondtowaiting = 5;
-    }else{
+    }else{*/
         secondtowaiting = 6;
-    }
-    await page.waitFor(secondtowaiting*1000);*/
+    //}
+    await page.waitFor(secondtowaiting*1000);
     const file = await page.screenshot();
     return file;
 }
