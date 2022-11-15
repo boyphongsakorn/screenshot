@@ -16,6 +16,16 @@ async function getPage() {
 }
 
 export async function getScreenshot(url, width, height, havelot, date) {
+    if (date) {
+        const checkimage = await fetch('https://raw.githubusercontent.com/boyphongsakorn/testrepo/main/img_tmp/'+date);
+        const status = await checkimage.status;
+        if (status == 200) {
+            const buffer = await checkimage.buffer();
+            console.log('Image found');
+            //reply.type('image/jpeg');
+            return buffer;
+        }
+    }
     const page = await getPage();
     if (havelot) {
         let datecheck
