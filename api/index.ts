@@ -12,7 +12,7 @@ module.exports = async (req: Request, res: Response) => {
   }
   let havelot = false;
   let date = null;
-  if (req.query.lotimg === "true") {
+  if (req.query.lotimg === "true" || req.query.date) {
     havelot = true
     date = req.query.date
   };
