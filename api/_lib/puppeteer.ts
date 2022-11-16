@@ -66,12 +66,12 @@ export async function getScreenshot(url, width, height, havelot, date) {
         height: Number(height) || 1066,
     });
     let secondtowaiting = 0;
-    //if havelot is true, it will wait for 5 seconds
-    /*if (havelot) {
-        secondtowaiting = 5;
-    }else{*/
+    //if havelot is true, it will wait for 1 seconds
+    if (havelot) {
         secondtowaiting = 1;
-    //}
+    }else{
+        secondtowaiting = 5;
+    }
     await page.waitFor(secondtowaiting*1000);
     const file = await page.screenshot();
     return file;
