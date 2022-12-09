@@ -70,7 +70,7 @@ export async function getScreenshot(url, width, height, havelot, date) {
     if (havelot) {
         secondtowaiting = 1;
     }else{
-        secondtowaiting = 5;
+        secondtowaiting = 6;
     }
     await page.waitFor(secondtowaiting*1000);
     const file = await page.screenshot();
